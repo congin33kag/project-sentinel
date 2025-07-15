@@ -1,0 +1,263 @@
+{
+  "metadata": {
+    "total_organizations": 21,
+    "categories": [
+      "unlawful"
+    ],
+    "extraction_date": null,
+    "source": "MHA Banned Organizations"
+  },
+  "organizations": [
+    {
+      "primary_name": "Students Islamic Movement of India",
+      "aliases": [
+        "Students Islamic Movement of India",
+        "SIMI"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "Students Islamic Movement of India (SIMI)"
+    },
+    {
+      "primary_name": "United Liberation Front of Assam",
+      "aliases": [
+        "United Liberation Front of Assam",
+        "ULFA"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "United Liberation Front of Assam (ULFA)"
+    },
+    {
+      "primary_name": "All Tripura Tiger Force",
+      "aliases": [
+        "All Tripura Tiger Force",
+        "ATTF"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "All Tripura Tiger Force (ATTF)"
+    },
+    {
+      "primary_name": "Meitei Extremist Organizations, namely- (i) Peoples’ Liberation Army (PLA) and its political wing, the Revolutionary People’s Front (RPF) (ii) United National Liberation Front (UNLF) and its armed wing, the Manipur Peoples’ Army (MPA) (iii) Peoples’ Revolutionary Party of Kangleipak (PREPAK) and its Armed wing, the ‘Red Army’. (iv) Kangleipak Communist Party (KCP) and its armed wing, also called the ‘Red Army’ (v) Kanglei Yaol Kanba Lup (KYKL) (vi) Coordination Committee (CorCom) and",
+      "aliases": [
+        "Meitei Extremist Organizations, namely- (i) Peoples’ Liberation Army (PLA) and its political wing, the Revolutionary People’s Front (RPF) (ii) United National Liberation Front (UNLF) and its armed wing, the Manipur Peoples’ Army (MPA) (iii) Peoples’ Revolutionary Party of Kangleipak (PREPAK) and its Armed wing, the ‘Red Army’. (iv) Kangleipak Communist Party (KCP) and its armed wing, also called the ‘Red Army’ (v) Kanglei Yaol Kanba Lup (KYKL) (vi) Coordination Committee (CorCom) and",
+        "PLA",
+        "RPF",
+        "UNLF",
+        "MPA",
+        "iii",
+        "PREPAK",
+        "KCP",
+        "KYKL",
+        "CorCom",
+        "vii",
+        "ASUK"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "Meitei Extremist Organizations, namely-\n(i) Peoples’ Liberation Army (PLA) and its political wing, the\nRevolutionary People’s Front (RPF)\n(ii) United National Liberation Front (UNLF) and its armed wing, the\nManipur Peoples’ Army (MPA)\n(iii) Peoples’ Revolutionary Party of Kangleipak (PREPAK) and its Armed\nwing, the ‘Red Army’.\n(iv) Kangleipak Communist Party (KCP) and its armed wing, also called\nthe ‘Red Army’\n(v) Kanglei Yaol Kanba Lup (KYKL)\n(vi) Coordination Committee (CorCom) and\n(vii) Alliance for Socialist Unity Kangleipak (ASUK)"
+    },
+    {
+      "primary_name": "National Liberation Front of Tripura",
+      "aliases": [
+        "National Liberation Front of Tripura",
+        "NLFT"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "National Liberation Front of Tripura (NLFT)"
+    },
+    {
+      "primary_name": "Hynniewtrep National Liberation Council",
+      "aliases": [
+        "Hynniewtrep National Liberation Council",
+        "HNLC"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "Hynniewtrep National Liberation Council (HNLC)"
+    },
+    {
+      "primary_name": "Liberation Tigers of Tamil Eelam",
+      "aliases": [
+        "Liberation Tigers of Tamil Eelam",
+        "LTTE"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "Liberation Tigers of Tamil Eelam (LTTE)"
+    },
+    {
+      "primary_name": "National Socialist Council of Nagaland (Khaplang) [NSCN (K)]",
+      "aliases": [
+        "National Socialist Council of Nagaland (Khaplang) [NSCN (K)]",
+        "Khaplang"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "National Socialist Council of Nagaland (Khaplang) [NSCN (K)]"
+    },
+    {
+      "primary_name": "Islamic Research Foundation",
+      "aliases": [
+        "Islamic Research Foundation",
+        "IRF"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "Islamic Research Foundation (IRF)"
+    },
+    {
+      "primary_name": "J amaat-e-Islami (JeI), Jammu and Kashmir",
+      "aliases": [
+        "J amaat-e-Islami (JeI), Jammu and Kashmir",
+        "JeI"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "J amaat-e-Islami (JeI), Jammu and Kashmir"
+    },
+    {
+      "primary_name": "J ammu and Kashmir Liberation Front",
+      "aliases": [
+        "J ammu and Kashmir Liberation Front",
+        "Mohd. Yasin Malik faction",
+        "JKLF-Y"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "J ammu and Kashmir Liberation Front (Mohd. Yasin Malik faction) (JKLF-Y)"
+    },
+    {
+      "primary_name": "S ikhs for Justice",
+      "aliases": [
+        "S ikhs for Justice",
+        "SFJ"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "S ikhs for Justice (SFJ)"
+    },
+    {
+      "primary_name": "P opular Front of India (PFI) and its associates or affiliates or fronts including Rehab India Foundation (RIF), Campus Front of India (CFI), All India Imams Council (AIIC), National Confederation of Human Rights Organization (NCHRO), National Women’s Front, Junior Front, Empower India Foundation and Rehab Foundation, Kerala.",
+      "aliases": [
+        "P opular Front of India (PFI) and its associates or affiliates or fronts including Rehab India Foundation (RIF), Campus Front of India (CFI), All India Imams Council (AIIC), National Confederation of Human Rights Organization (NCHRO), National Women’s Front, Junior Front, Empower India Foundation and Rehab Foundation, Kerala.",
+        "PFI",
+        "RIF",
+        "CFI",
+        "AIIC",
+        "NCHRO"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 1,
+      "raw_text": "P opular Front of India (PFI) and its associates or affiliates or fronts including\nRehab India Foundation (RIF), Campus Front of India (CFI), All India Imams\nCouncil (AIIC), National Confederation of Human Rights Organization\n(NCHRO), National Women’s Front, Junior Front, Empower India Foundation\nand Rehab Foundation, Kerala."
+    },
+    {
+      "primary_name": "M uslim League Jammu Kashmir",
+      "aliases": [
+        "M uslim League Jammu Kashmir",
+        "Masarat Alam faction",
+        "MLJK-MA"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "M uslim League Jammu Kashmir (Masarat Alam faction)/ (MLJK-MA)"
+    },
+    {
+      "primary_name": "T ehreek-e-Hurriyat, Jammu and Kashmir",
+      "aliases": [
+        "T ehreek-e-Hurriyat, Jammu and Kashmir",
+        "TeH"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "T ehreek-e-Hurriyat, Jammu and Kashmir (TeH)"
+    },
+    {
+      "primary_name": "M uslim Conference Jammu and Kashmir",
+      "aliases": [
+        "M uslim Conference Jammu and Kashmir",
+        "Bhat faction",
+        "MCJK-B"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "M uslim Conference Jammu and Kashmir (Bhat faction) (MCJK-B)"
+    },
+    {
+      "primary_name": "J ammu Kashmir National Front",
+      "aliases": [
+        "J ammu Kashmir National Front",
+        "JKNF"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "J ammu Kashmir National Front (JKNF)"
+    },
+    {
+      "primary_name": "J ammu and Kashmir Peoples Freedom League",
+      "aliases": [
+        "J ammu and Kashmir Peoples Freedom League",
+        "JKPFL"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "J ammu and Kashmir Peoples Freedom League (JKPFL)"
+    },
+    {
+      "primary_name": "F our factions of Jammu and Kashmir Peoples League (JKPL), namely: JKPL (Mukhtar Ahmed Waza), JKPL (Bashir Ahmad Tota), JKPL (Ghulam Mohammad Khan @Sopori) and JKPL (Aziz Sheikh) led by Yaqoob Sheikh",
+      "aliases": [
+        "F our factions of Jammu and Kashmir Peoples League (JKPL), namely: JKPL (Mukhtar Ahmed Waza), JKPL (Bashir Ahmad Tota), JKPL (Ghulam Mohammad Khan @Sopori) and JKPL (Aziz Sheikh) led by Yaqoob Sheikh",
+        "JKPL",
+        "Mukhtar Ahmed Waza",
+        "Bashir Ahmad Tota",
+        "Aziz Sheikh"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "F our factions of Jammu and Kashmir Peoples League (JKPL), namely: JKPL\n(Mukhtar Ahmed Waza), JKPL (Bashir Ahmad Tota), JKPL (Ghulam\nMohammad Khan @Sopori) and JKPL (Aziz Sheikh) led by Yaqoob Sheikh"
+    },
+    {
+      "primary_name": "J ammu and Kashmir Ittihadul Muslimeen",
+      "aliases": [
+        "J ammu and Kashmir Ittihadul Muslimeen",
+        "JKIM"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "J ammu and Kashmir Ittihadul Muslimeen (JKIM)"
+    },
+    {
+      "primary_name": "A wami Action Committee",
+      "aliases": [
+        "A wami Action Committee",
+        "AAC"
+      ],
+      "category": "unlawful",
+      "source_pdf": "unlawful_organizations.pdf",
+      "page_number": 2,
+      "raw_text": "A wami Action Committee (AAC)"
+    }
+  ]
+}

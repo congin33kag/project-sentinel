@@ -1,0 +1,532 @@
+[
+  {
+    "name": "Babbar Khalsa International",
+    "aliases": [
+      "BKI"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Khalistan Commando Force",
+    "aliases": [
+      "KCF"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Khalistan Zindabad Force",
+    "aliases": [
+      "KZF"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "International Sikh Youth Federation",
+    "aliases": [
+      "ISYF"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Lashkar-E-Taiba",
+    "aliases": [
+      "LT",
+      "Pasban-E-Ahle Hadis",
+      "The Resistance Front and all its manifestations and front organizations."
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Jaish-E-Mohammed",
+    "aliases": [
+      "JM",
+      "PAFF",
+      "People’s Anti-Fascist-Front  and all its manifestations and front organizations.",
+      "Tahreik-E-Furqan"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Harkat-ul-Mujahideen",
+    "aliases": [
+      "HM",
+      "Harkat-ul-Ansar",
+      "Harkat-ul-Jehad-E-Islami or Ansar- UlUmmah"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Hizb-Ul-Mujahideen",
+    "aliases": [
+      "HM",
+      "Hizb-Ul-Mujahideen Pir Panjal Regiment"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Al-Umar-Mujahideen",
+    "aliases": [
+      "AUM"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Jammu and Kashmir Islamic Front",
+    "aliases": [
+      "JKIF"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "United Liberation Front of Assam",
+    "aliases": [
+      "ULFA"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "National Democratic Front of Bodoland",
+    "aliases": [
+      "NDFB",
+      "National Democratic Front of Bodoland  in Assam"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "People Liberation Army",
+    "aliases": [
+      "PLA"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "United National Liberation Front",
+    "aliases": [
+      "UNLF"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "People’s Revolutionary Party of Kangleipak",
+    "aliases": [
+      "PREPAK",
+      "PSRPK"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Kangleipak Communist Party",
+    "aliases": [
+      "KCP"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Kanglei Yaol Kanba Lup",
+    "aliases": [
+      "KYKL"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Manipur Peoples Liberation Front",
+    "aliases": [
+      "MPLF"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "All Tripura Tiger Force",
+    "aliases": [
+      "ATTF"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "Liberation Tigers of Tamil Eelam",
+    "aliases": [
+      "LTTE"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "Students Islamic Movement of India",
+    "aliases": [
+      "SIMI"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "Deendar Anjuman",
+    "aliases": [],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Communist Party of India",
+    "aliases": [
+      "CPI",
+      "Communist Party of India  all its formations and front organizations.",
+      "Maoist"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Maoist Communist Centre",
+    "aliases": [
+      "MCC",
+      "Maoist Communist Centre , all its formations and Front Organizations"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Al Badr",
+    "aliases": [
+      "AB"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Jamiat-ul-Mujahideen",
+    "aliases": [
+      "JM"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Al-Qaida",
+    "aliases": [
+      "AQ",
+      "AQIS",
+      "Al-Qaida in Indian Sub-Continent  and all its manifestations.",
+      "Al-qaeda",
+      "Al-qaeda in Indian Sub-Continent  and all its manifestations."
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Dukhtaran-E-Millat",
+    "aliases": [
+      "DEM",
+      "DM"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Tamil Nadu Liberation Army",
+    "aliases": [
+      "TNLA"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Tamil National Retrieval Troops",
+    "aliases": [
+      "TNRT"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Akhil Bharat Nepali Ekta Samaj",
+    "aliases": [
+      "ABNES"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Organizations listed in the Schedule to the UN Prevention and Suppression of Terrorism",
+    "aliases": [
+      "Implementation of Security Council Resolutions",
+      "OLSTUPST",
+      "Organizations listed in the Schedule to the UN Prevention and Suppression of Terrorism  order, 2007 made under Section 2 of the United Nations  Act, 1947 and amended from time to time.",
+      "Security Council"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Indian Mujahideen, all its formations and front organizations",
+    "aliases": [
+      "IMAIFFO"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Garo National Liberation Army",
+    "aliases": [
+      "GNLA",
+      "Garo National Liberation Army , all its formations and front organizations"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Kamatapur Liberation Organization, all its formations and front organizations",
+    "aliases": [
+      "KLOAIFFO"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Islamic State",
+    "aliases": [
+      "Daish, and all its manifestations.",
+      "Islamic State of Iraq and Levant",
+      "Islamic State of Iraq and Syria"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "National Socialist Council of Nagaland",
+    "aliases": [
+      "Khaplang",
+      "NSCN",
+      "National Socialist Council of Nagaland  [NSCN ]"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "The Khalistan Liberation Force and all its manifestations.",
+    "aliases": [
+      "KLFAIM"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Jamaat-ul-Mujahideen Bangladesh or Jamaat-ul-Mujahideen India or Jamaat- ulMujahideen Hindustan and all its manifestations",
+    "aliases": [
+      "JMBOJMIOJUHAIM"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Jammu and Kashmir Ghaznavi Force",
+    "aliases": [
+      "JKGF",
+      "Jammu and Kashmir Ghaznavi Force  and all its manifestations and front organisations."
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Khalistan Tiger Force",
+    "aliases": [
+      "KTF",
+      "Khalistan Tiger Force  and all its manifestations and front organisations."
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Hizb-Ut-Tahrir",
+    "aliases": [
+      "HUT",
+      "Hizb-Ut-Tahrir  and all its manifestations and front organisations.",
+      "HuT"
+    ],
+    "category": "terrorist",
+    "source": "MHA India"
+  },
+  {
+    "name": "Meitei Extremist Organizations, namely-",
+    "aliases": [
+      "ASUK",
+      "CorCom",
+      "KCP",
+      "KYKL",
+      "MEON",
+      "MPA",
+      "Meitei Extremist Organizations, namely-  Peoples’ Liberation Army  and its political wing, the Revolutionary People’s Front   United National Liberation Front  and its armed wing, the Manipur Peoples’ Army   Peoples’ Revolutionary Party of Kangleipak  and its Armed wing, the ‘Red Army’.  Kangleipak Communist Party  and its armed wing, also called the ‘Red Army’  Kanglei Yaol Kanba Lup   Coordination Committee  and  Alliance for Socialist Unity Kangleipak",
+      "PLA",
+      "PREPAK",
+      "RPF",
+      "UNLF",
+      "iii",
+      "vii"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "National Liberation Front of Tripura",
+    "aliases": [
+      "NLFT"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "Hynniewtrep National Liberation Council",
+    "aliases": [
+      "HNLC"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "Islamic Research Foundation",
+    "aliases": [
+      "IRF"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "J amaat-e-Islami",
+    "aliases": [
+      "J amaat-e-Islami , Jammu and Kashmir",
+      "JAI",
+      "JeI"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "J ammu and Kashmir Liberation Front",
+    "aliases": [
+      "JAKLF",
+      "JKLF-Y",
+      "Mohd. Yasin Malik faction"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "S ikhs for Justice",
+    "aliases": [
+      "SFJ",
+      "SIFJ"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "P opular Front of India",
+    "aliases": [
+      "AIIC",
+      "CFI",
+      "NCHRO",
+      "P opular Front of India  and its associates or affiliates or fronts including Rehab India Foundation , Campus Front of India , All India Imams Council , National Confederation of Human Rights Organization , National Women’s Front, Junior Front, Empower India Foundation and Rehab Foundation, Kerala.",
+      "PFI",
+      "POFI",
+      "RIF"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "M uslim League Jammu Kashmir",
+    "aliases": [
+      "MLJK-MA",
+      "MULJK",
+      "Masarat Alam faction"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "T ehreek-e-Hurriyat, Jammu and Kashmir",
+    "aliases": [
+      "TEHJK",
+      "TeH"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "M uslim Conference Jammu and Kashmir",
+    "aliases": [
+      "MCJK-S",
+      "MUCJK",
+      "Sumji faction"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "J ammu Kashmir National Front",
+    "aliases": [
+      "JAKNF",
+      "JKNF"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "J ammu and Kashmir Peoples Freedom League",
+    "aliases": [
+      "JAKPFL",
+      "JKPFL"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "F our factions of Jammu and Kashmir Peoples League",
+    "aliases": [
+      "Aziz Sheikh",
+      "Bashir Ahmad Tota",
+      "F our factions of Jammu and Kashmir Peoples League , namely: JKPL , JKPL , JKPL  and JKPL  led by Yaqoob Sheikh",
+      "FOFJKPL",
+      "Ghulam Mohammad Khan @Sopori",
+      "JKPL",
+      "Mukhtar Ahmed Waza"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "J ammu and Kashmir Ittihadul Muslimeen",
+    "aliases": [
+      "JAKIM",
+      "JKIM"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  },
+  {
+    "name": "A wami Action Committee",
+    "aliases": [
+      "AAC",
+      "AWAC"
+    ],
+    "category": "unlawful",
+    "source": "MHA India"
+  }
+]
