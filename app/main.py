@@ -12,7 +12,7 @@ from datetime import datetime
 from sqlalchemy import create_engine, or_
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.exc import SQLAlchemyError
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse # FIX: Import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import our database models
@@ -36,11 +36,13 @@ app = FastAPI(
 origins = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    # Add the Render URL once it's live to be more specific
+    "https://project-sentinel.onrender.com",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"], # Allow all origins for simplicity, can be restricted later
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -350,24 +352,28 @@ async def get_entity_details(entity_id: int, db: Session = Depends(get_db)):
         print(f"Database error getting entity details: {e}")
         raise HTTPException(status_code=500, detail="Database error")
 
-# Error handlers
+# FIX: Error handlers now return proper JSONResponse objects
 @app.exception_handler(404)
 async def not_found_handler(request, exc):
     """Handle 404 errors."""
-    return {
-        "error": "Not Found",
-        "message": "The requested resource was not found",
-        "status_code": 404
-    }
+    return JSONResponse(
+        status_code=404,
+        content={
+            "error": "Not Found",
+            "message": "The requested resource was not found",
+        }
+    )
 
 @app.exception_handler(500)
 async def internal_error_handler(request, exc):
     """Handle 500 errors."""
-    return {
-        "error": "Internal Server Error",
-        "message": "An internal server error occurred",
-        "status_code": 500
-    }
+    return JSONResponse(
+        status_code=500,
+        content={
+            "error": "Internal Server Error",
+            "message": "An internal server error occurred",
+        }
+    )
 
 if __name__ == "__main__":
     import uvicorn
