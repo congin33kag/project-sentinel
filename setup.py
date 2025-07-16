@@ -1,5 +1,3 @@
-# Location: /Vibe Coding 101/setup.py
-
 from setuptools import setup, find_packages
 
 setup(
