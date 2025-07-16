@@ -14,12 +14,13 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.exc import SQLAlchemyError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 # Import our database models
 from app.models.entity import Base, Entity, Alias, Sanction
 
 # Database configuration
-DATABASE_URL = "sqlite:///./project_sentinel.db"
+DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///./project_sentinel.db')
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
