@@ -12,7 +12,7 @@ from datetime import datetime
 from sqlalchemy import create_engine, or_
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.exc import SQLAlchemyError
-from fastapi.responses import FileResponse, JSONResponse # FIX: Import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import our database models
@@ -33,16 +33,16 @@ app = FastAPI(
 )
 
 # Add CORS middleware
+# FIX: Added the public Render URL to the list of allowed origins
 origins = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    # Add the Render URL once it's live to be more specific
-    "https://project-sentinel.onrender.com",
+    "https://project-sentinel-2.onrender.com",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Allow all origins for simplicity, can be restricted later
+    allow_origins=origins, # FIX: Use the specific origins list
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
