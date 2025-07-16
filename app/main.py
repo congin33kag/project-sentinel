@@ -9,12 +9,13 @@ from typing import List, Optional
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel, Field
 from datetime import datetime
-from sqlalchemy import create_engine, or_
+from sqlalchemy import create_engine, or_, func
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.exc import SQLAlchemyError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 import os
+from thefuzz import fuzz
 
 # Import our database models
 from app.models.entity import Base, Entity, Alias, Sanction
@@ -192,34 +193,32 @@ async def screen_entity(request: ScreenRequest, db: Session = Depends(get_db)):
         ScreenResponse with matching entities and metadata
     """
     processing_start = datetime.utcnow()
-    
     try:
-        # Search for matching entities
-        matching_entities = search_entities(db, request.entity_name)
-        
-        # Convert entities to response format
+        query = request.entity_name.strip()
+        query_lower = query.lower()
+        # Exact match on entity names (case-insensitive)
+        exact_entity_matches = db.query(Entity).filter(func.lower(Entity.name) == query_lower).all()
+        # Exact match on aliases (case-insensitive)
+        exact_alias_matches = db.query(Entity).join(Alias).filter(func.lower(Alias.alias_name) == query_lower).all()
+        # Fuzzy matches on entity names
+        all_entities = db.query(Entity).all()
+        fuzzy_matches = [e for e in all_entities if fuzz.ratio(query_lower, e.name.lower()) > 85]
+        # Combine all matches, removing duplicates
+        all_matches = set(exact_entity_matches + exact_alias_matches + fuzzy_matches)
+        # Prepare match results with confidence scores
         matches = []
-        for entity in matching_entities:
-            # Get all aliases for this entity
+        for entity in all_matches:
             aliases = [alias.alias_name for alias in entity.aliases]
-            
-            # Get sanction information (use the first sanction if multiple exist)
             sanction = entity.sanctions[0] if entity.sanctions else None
             sanctioning_body = sanction.sanctioning_body if sanction else "Unknown"
             program = sanction.program if sanction else "Unknown"
-            
-            # Determine if match was via alias
-            query_lower = request.entity_name.lower().strip()
-            entity_name_lower = entity.name.lower().strip()
-            matched_via_alias = query_lower not in entity_name_lower
-            
-            # Calculate confidence score
-            confidence = calculate_confidence_score(
-                request.entity_name, 
-                entity.name, 
-                matched_via_alias
-            )
-            
+            # Determine confidence
+            if entity in exact_alias_matches:
+                confidence = 1.0
+            elif entity in exact_entity_matches:
+                confidence = 0.95
+            else:
+                confidence = fuzz.ratio(query_lower, entity.name.lower()) / 100.0
             match_result = MatchResult(
                 entity_id=entity.id,
                 name=entity.name,
@@ -232,15 +231,10 @@ async def screen_entity(request: ScreenRequest, db: Session = Depends(get_db)):
                 last_updated=entity.date_updated.isoformat() if entity.date_updated else datetime.utcnow().isoformat()
             )
             matches.append(match_result)
-        
-        # Sort matches by confidence score (highest first)
+        # Sort by confidence descending
         matches.sort(key=lambda x: x.confidence_score, reverse=True)
-        
-        # Calculate processing time
         processing_end = datetime.utcnow()
         processing_time_ms = int((processing_end - processing_start).total_seconds() * 1000)
-        
-        # Build response
         response = ScreenResponse(
             query=request.entity_name,
             country_filter=request.country,
@@ -249,9 +243,7 @@ async def screen_entity(request: ScreenRequest, db: Session = Depends(get_db)):
             processing_time_ms=processing_time_ms,
             timestamp=datetime.utcnow().isoformat()
         )
-        
         return response
-        
     except Exception as e:
         print(f"Error during entity screening: {e}")
         raise HTTPException(status_code=500, detail="Internal server error during screening")
