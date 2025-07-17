@@ -37,3 +37,4 @@ typing_extensions==4.14.1
 urllib3==2.5.0
 uvicorn==0.23.2
 thefuzz
+pandas

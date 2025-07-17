@@ -34,21 +34,20 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
-# Add CORS middleware
-# FIX: Added the public Render URL to the list of allowed origins
+# New CORS configuration for React dev server
 origins = [
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "https://project-sentinel-2.onrender.com",
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins, # FIX: Use the specific origins list
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Existing CORS (if any) below can be removed or kept as needed
 
 # Database dependency
 def get_db():
@@ -296,53 +295,22 @@ async def get_statistics(db: Session = Depends(get_db)):
             "entity_types": {}
         }
 
-@app.get("/v1/entities/{entity_id}")
+@app.get("/v1/entity/{entity_id}")
 async def get_entity_details(entity_id: int, db: Session = Depends(get_db)):
-    """
-    Get detailed information about a specific entity.
-    
-    Args:
-        entity_id: ID of the entity to retrieve
-        db: Database session
-        
-    Returns:
-        Detailed entity information including aliases and sanctions
-    """
     try:
         entity = db.query(Entity).filter(Entity.id == entity_id).first()
-        
         if not entity:
             raise HTTPException(status_code=404, detail="Entity not found")
-        
-        # Get aliases
         aliases = [alias.alias_name for alias in entity.aliases]
-        
-        # Get sanctions
-        sanctions = []
-        for sanction in entity.sanctions:
-            sanctions.append({
-                "sanctioning_body": sanction.sanctioning_body,
-                "program": sanction.program,
-                "sanction_type": sanction.sanction_type,
-                "description": sanction.description,
-                "date_imposed": sanction.date_imposed.isoformat() if sanction.date_imposed else None,
-                "date_expires": sanction.date_expires.isoformat() if sanction.date_expires else None
-            })
-        
         return {
-            "entity_id": entity.id,
+            "id": entity.id,
             "name": entity.name,
             "type": entity.type,
-            "description": entity.description,
             "source": entity.source,
-            "aliases": aliases,
-            "sanctions": sanctions,
-            "date_added": entity.date_added.isoformat() if entity.date_added else None,
-            "date_updated": entity.date_updated.isoformat() if entity.date_updated else None
+            "aliases": aliases
         }
-        
     except SQLAlchemyError as e:
-        print(f"Database error getting entity details: {e}")
+        print(f"Database error: {e}")
         raise HTTPException(status_code=500, detail="Database error")
 
 # FIX: Error handlers now return proper JSONResponse objects

@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def main():
     """
     Main function to clear and populate the database using high-performance
-    batch processing with data validation.
+    batch processing with robust data validation.
     """
     DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./project_sentinel.db")
     
@@ -43,7 +43,8 @@ def main():
         
         files_to_process = {
             'mha_banned_list.json': 'MHA India',
-            'ofac_sdn_list.json': 'US OFAC'
+            'ofac_sdn_list.json': 'US OFAC',
+            'un_consolidated_list.json': 'UNSC'
         }
         
         all_objects_to_add = []
@@ -62,11 +63,18 @@ def main():
             for item in data:
                 items_processed += 1
                 
-                # --- THE FIX IS HERE ---
-                # Check for 'primary_name' OR 'name' to handle both MHA and OFAC data formats.
-                primary_name = item.get('primary_name') or item.get('name')
+                raw_name = item.get('primary_name') or item.get('name')
                 
-                if primary_name and primary_name.strip():
+                # --- THE FIX IS HERE ---
+                # 1. Ensure the raw_name is not None.
+                # 2. Convert it to a string to handle potential numbers (floats).
+                # 3. Then, safely strip whitespace.
+                if raw_name is not None:
+                    primary_name = str(raw_name).strip()
+                else:
+                    primary_name = None
+
+                if primary_name:
                     new_entity = Entity(
                         name=primary_name,
                         type=item.get('list_type') or item.get('category', 'organization'),
@@ -75,13 +83,11 @@ def main():
                     
                     if item.get('aliases'):
                         for alias_name in item['aliases']:
-                            # Ensure alias_name is a string before creating Alias object
                             if isinstance(alias_name, str):
                                 new_alias = Alias(alias_name=alias_name, entity=new_entity)
                                 all_objects_to_add.append(new_alias)
                             else:
                                 logging.warning(f"Skipping non-string alias for entity {primary_name}: {alias_name}")
-
 
                     all_objects_to_add.append(new_entity)
                 else:

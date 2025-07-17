@@ -107,6 +107,22 @@ class Sanction(Base):
         return f"{self.sanctioning_body} - {self.program}"
 
 
+class Relationship(Base):
+    __tablename__ = 'relationships'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    from_entity_id = Column(Integer, ForeignKey('entities.id'), nullable=False)
+    to_entity_id = Column(Integer, ForeignKey('entities.id'), nullable=False)
+    relation_type = Column(String(100), nullable=False)
+    date_added = Column(DateTime, default=datetime.utcnow)
+    
+    from_entity = relationship("Entity", foreign_keys=[from_entity_id], backref="outgoing_relationships")
+    to_entity = relationship("Entity", foreign_keys=[to_entity_id], backref="incoming_relationships")
+    
+    def __repr__(self):
+        return f"<Relationship(id={self.id}, from={self.from_entity_id}, to={self.to_entity_id}, type='{self.relation_type}')>"
+
+
 # Helper functions for common database operations
 def create_entity_with_aliases(name, entity_type, aliases_list, source=None):
     """
