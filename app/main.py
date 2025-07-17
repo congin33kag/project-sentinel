@@ -50,7 +50,7 @@ app.add_middleware(
 )
 
 # Serve React static files
-app.mount("/", StaticFiles(directory="dashboard-ui/build", html=True), name="static")
+app.mount("/static", StaticFiles(directory="dashboard-ui/build/static"), name="static")
 
 # Existing CORS (if any) below can be removed or kept as needed
 
@@ -318,28 +318,9 @@ async def get_entity_details(entity_id: int, db: Session = Depends(get_db)):
         print(f"Database error: {e}")
         raise HTTPException(status_code=500, detail="Database error")
 
-# FIX: Error handlers now return proper JSONResponse objects
-@app.exception_handler(404)
-async def not_found_handler(request, exc):
-    """Handle 404 errors."""
-    return JSONResponse(
-        status_code=404,
-        content={
-            "error": "Not Found",
-            "message": "The requested resource was not found",
-        }
-    )
-
-@app.exception_handler(500)
-async def internal_error_handler(request, exc):
-    """Handle 500 errors."""
-    return JSONResponse(
-        status_code=500,
-        content={
-            "error": "Internal Server Error",
-            "message": "An internal server error occurred",
-        }
-    )
+@app.get("/{full_path:path}")
+async def serve_react_app(full_path: str):
+    return FileResponse("dashboard-ui/build/index.html")
 
 if __name__ == "__main__":
     import uvicorn
