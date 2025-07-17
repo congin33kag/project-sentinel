@@ -14,6 +14,7 @@ from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.exc import SQLAlchemyError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 import os
 from thefuzz import fuzz
 
@@ -46,6 +47,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Serve React static files
+app.mount("/", StaticFiles(directory="dashboard-ui/build", html=True), name="static")
 
 # Existing CORS (if any) below can be removed or kept as needed
 
