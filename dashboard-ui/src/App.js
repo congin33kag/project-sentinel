@@ -58,6 +58,7 @@ function App() {
           <button onClick={handleSearch} disabled={loading}>
             {loading ? 'Scanning...' : 'Scan'}
           </button>
+          <p style={{ color: 'gray', fontSize: '12px' }}>API URL: {API_BASE_URL}</p>
         </div>
 
         <div className="results-container">
