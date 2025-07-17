@@ -38,6 +38,7 @@ app = FastAPI(
 # New CORS configuration for React dev server
 origins = [
     "http://localhost:3000",
+    "https://project-sentinel-2.onrender.com",
 ]
 
 app.add_middleware(

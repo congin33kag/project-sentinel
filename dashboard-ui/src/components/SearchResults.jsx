@@ -2,6 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import EntityProfilePage from './EntityProfilePage';
 
+// Determine API base URL based on environment
+const API_BASE_URL = process.env.NODE_ENV === 'production'
+  ? 'https://project-sentinel-2.onrender.com'
+  : 'http://localhost:8000';
+
 const cardStyle = {
   background: '#ffffff',
   borderRadius: '8px',
@@ -31,7 +36,7 @@ function SearchResults({ results }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:8000/v1/entity/${entityId}`);
+      const response = await axios.get(`${API_BASE_URL}/v1/entity/${entityId}`);
       setSelectedEntity(response.data);
     } catch (err) {
       setError('Failed to fetch entity details');

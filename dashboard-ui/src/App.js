@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import SearchResults from './components/SearchResults';
 
+// Determine API base URL based on environment
+const API_BASE_URL = process.env.NODE_ENV === 'production'
+  ? 'https://project-sentinel-2.onrender.com'
+  : 'http://localhost:8000';
+
 const containerStyle = {
   minHeight: '100vh',
   display: 'flex',
@@ -58,7 +63,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post('http://localhost:8000/v1/screen', { entity_name: query });
+      const response = await axios.post(`${API_BASE_URL}/v1/screen`, { entity_name: query });
       setResults(response.data.matches);
       setSearched(true);
     } catch (err) {
