@@ -6,11 +6,9 @@ as specified in the PRD.
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from datetime import datetime
-
-Base = declarative_base()
+from app.db.session import Base
 
 
 class Entity(Base):
